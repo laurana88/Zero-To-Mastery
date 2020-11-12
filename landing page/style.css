@@ -1,0 +1,39 @@
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;;
+}
+
+.laura-background {
+  background: url(images/tianyi-ma-WiONHd_zYI4-unsplash.jpg) center;
+  background-size: cover;
+  height:100%;
+}
+
+hr {
+  border-color: #FB7B39;
+  border-width: 2px;
+  width:25%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size:4rem;
+}
+
+.btn {
+  text-transform: uppercase;
+}
+
+.btn-lg {
+  padding: .75rem 2rem;
+}
+
+.btn-primary {
+  background-color: #FB7B39;
+  border-color: #FB7B39;
+}

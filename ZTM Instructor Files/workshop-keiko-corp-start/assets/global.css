@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/******* RESET ********/
+
+/* additional resets I want to apply on top of remedy */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  min-height: 100%;
+  font-family: 'Roboto', sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+/******* DESIGN SYSTEM *******/
+
+/* Starting with a good base will help increase the efficiency of your time and help balance the project. */
+
+:root {
+  /* max width for site content */
+  --maxWidth: 1280px;
+  --centerColumn: min(80ch, calc(100vw - 1rem));
+  --rowGap: 5rem;
+  --gap: 1rem;
+
+  /* colors */
+  --red: #ef5b59;
+  --lightBlue: #f4f7fe;
+  --purple: #20014d;
+  --yellow: #f1c40f;
+  --darkRed: #de4a46;
+  --heading: #020100;
+  --text: #757575;
+
+  /* text sizes */
+  --smText: 0.64rem;
+  --mdText: 0.8rem;
+  --lgText: 1rem;
+  --xlText: 1.25rem;
+  --smHeading: 1.563rem;
+  --mdHeading: 1.953rem;
+  --lgHeading: 2.441rem;
+  --xlHeading: 3.052rem;
+
+  /* spacing */
+  --smPadding: 0.5rem;
+  --mdPadding: 1rem;
+  --lgPadding: 1.5rem;
+  --xlPadding: 2rem;
+  --smMargin: 0.5rem;
+  --mdMargin: 1rem;
+  --lgMargin: 1.5rem;
+  --xlMargin: 2rem;
+
+  /* button styles */
+  --br: 0.25rem;
+  --btnHeight: 40px;
+  --btnPadding: 0.25rem var(--lgPadding);
+
+  /* transition */
+  --transition: 0.2s all ease-in;
+
+  /* shadows */
+  --smShadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.25);
+  --mdShadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.25);
+  --lgShadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --focusShadow: 0 0 0 3px var(--purple);
+
+  /* breakpoints */
+  /* @media (min-width: 768px) { ... } */
+  /* @media (min-width: 1024px) { ... } */
+  /* @media (min-width: 1280px) { ... } */
+}
+
+body {
+  color: var(--text);
+  font-size: clamp(100%, 1rem + 0.25vw, 2rem);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2rem, 2rem + 1vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 1.5rem + 1vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 1.25rem + 0.75vw, 2.25rem);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+textarea,
+button {
+  line-height: 2;
+  padding: 0.25rem;
+  border: 1px solid var(--heading);
+  border-radius: 0.25rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--yellow);
+}
+
+button,
+input[type='submit'] {
+  cursor: pointer;
+  color: var(--lightBlue);
+  background: var(--red);
+  border: 2px solid var(--red);
+  padding: var(--btnPadding);
+  transition: var(--transition);
+  text-transform: uppercase;
+  font-size: var(--lgText);
+  box-shadow: var(--smShadow);
+}
+
+button:hover,
+input[type='submit']:hover {
+  background: var(--darkRed);
+  border: 2px solid var(--darkRed);
+  box-shadow: var(--mdShadow);
+}
+
+button:focus,
+input[type='submit']:focus {
+  box-shadow: var(--focusShadow);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--heading);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: var(--transition);
+}
+
+a:hover {
+  border-bottom: 2px solid var(--red);
+}
+
+/* *** COLORS *** */
+
+/* Give contact and pricing sections lightBlue background */
+#contact,
+#pricing {
+  background: var(--lightBlue);
+}
+
+#companies {
+  background: var(--purple);
+  color: var(--lightBlue);
+}
+
+#companies h2 {
+  color: var(--lightBlue);
+}
